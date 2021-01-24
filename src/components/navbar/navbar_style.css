@@ -1,0 +1,75 @@
+.navbar{
+    max-height: 60px;
+    max-width: 100%;
+    width: 100%;
+    
+}
+.navbar section{
+    position: fixed;
+    transition: all 0.5s ease-in;
+    transform: translateY(-200%);
+    right: 0%;
+    bottom: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding: 100px;
+    z-index: 2;
+    text-align: center;
+}
+.navbar section.active{
+    transition: all 0.3s ease;
+    transform: translateY(0%);
+    background: #11998e; 
+    background: -webkit-linear-gradient(to right, #11998e, #38ef7d);
+    background: linear-gradient(to right, #11998e, #38ef7d);
+
+}
+.navbar section a{
+    display: block;
+    font-size: 55px;
+    line-height: 105px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s linear;
+    font-weight: 800;
+}
+.navbar section.active a:hover{
+    color: rgb(85, 85, 85);
+}
+
+
+
+.button-icon{
+    position: absolute;
+    z-index: 3;
+
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50% 100% 0% 100%;
+    background-color: #11ac8b;
+    border: none;
+    cursor: pointer;
+    background-image: url('https://ljc-dev.github.io/testing0/ham.svg');
+    background-repeat: no-repeat;
+    background-size: 80%;    
+    transition: all 0.3s ease;
+}
+.button-icon.active{
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.2);
+}
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 800px)
+{
+    .navbar section a{
+        font-size: 30px;
+    }
+}
